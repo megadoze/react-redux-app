@@ -11,11 +11,9 @@ const taskSlice = createSlice({
     recived(state, action) {
       state.entities = action.payload;
       state.isLoading = false;
-      console.log("State before create", state.entities);
     },
     create(state, action) {
       state.entities.push(action.payload);
-      console.log("action.payload", action.payload);
       state.isLoading = false;
     },
     update(state, action) {
